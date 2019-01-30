@@ -1,8 +1,8 @@
 /**
- * All rights Reserved, Designed By www.jxdevelop.com<br>
+ * All rights Reserved, Designed By monang<br>
  * <br>
  *
- * @Copyright: 2018 www.jxdevelop.com Inc. All rights reserved.
+ * @Copyright: 2018 monang. All rights reserved.
  */
 package com.monang.community.exception;
 

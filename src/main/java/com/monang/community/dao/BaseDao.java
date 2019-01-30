@@ -18,7 +18,7 @@ import java.util.List;
  * <br>
  * 功能概要：数据库操作基础类<br>
  * <br>
- * 创建日期：2019年01月30日 yubin<br>
+ * 创建日期：2019年01月30日 monang<br>
  * <br>
  * 修改日期：<br>
  */
