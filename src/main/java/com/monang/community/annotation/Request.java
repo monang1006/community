@@ -9,18 +9,18 @@ package com.monang.community.annotation;
 import java.lang.annotation.*;
 
 /**
- * 类名：RequestMethod<br>
+ * 类名：Request<br>
  * <br>
- * 功能概要：servlet请求分发注解<br>
+ * 功能概要：<br>
  * <br>
- * 创建日期：2019年01月30日 monang<br>
+ * 创建日期：2019年01月31日 monang<br>
  * <br>
  * 修改日期：<br>
  */
-@Target({ElementType.METHOD})
+@Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-public @interface RequestMethod {
+public @interface Request {
     /**
      * Servlet请求分发对应路径
      *
