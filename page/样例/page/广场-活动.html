@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>广场</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-title" content="智创空间">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script>
+        "use strict";
+        ! function(e, t) {
+            function i() {
+                var e = window.orientation;
+                return 0 == e || 180 == e ? 0 : 90 == e || e == -90 ? 1 : void 0
+            }
+
+            function n() {
+                var e = o.getBoundingClientRect().width;
+                e > 540 && (e = 540), e < 375 && (e = 375);
+                var t = e / 10;
+                o.style.fontSize = t + "px", c.rem = t
+            }
+            var r, a = e.document,
+                o = a.documentElement,
+                m = a.querySelector('meta[name="viewport"]'),
+                s = e.devicePixelRatio,
+                c = t.flexible || (t.flexible = {}),
+                d = i();
+            o.setAttribute("data-dpr", s), m || (m = a.createElement("meta"), m.setAttribute("name", "viewport"), m.setAttribute("content", "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"), a.querySelector("head") && o.firstElementChild.appendChild(m)), e.addEventListener("resize", function() {
+                clearTimeout(r), r = setTimeout(n, 300)
+            }, !1), e.addEventListener("pageshow", function(e) {
+                e.persisted && (clearTimeout(r), r = setTimeout(n, 300))
+            }, !1), e.addEventListener("orientationchange", function(e) {
+                var t = i();
+                d != t && (c.orientation = d = t)
+            }, !1), n(), c.dpr = s, c.refreshRem = n, c.orientation = d, c.rem2px = function(e) {
+                var t = parseFloat(e) * this.rem;
+                return "string" == typeof e && e.match(/rem$/) && (t += "px"), t
+            }, c.px2rem = function(e) {
+                var t = parseFloat(e) / this.rem;
+                return "string" == typeof e && e.match(/px$/) && (t += "rem"), t
+            }
+        }(window, window.UR || (window.UR = {}));
+    </script>
+</head>
+
+<body>
+    <section class="aui-flexView">
+        <section class="aui-scrollView">
+            <div class="aui-nav-box" id="domain">
+                <a href="javascript:;" onclick="getExpertInfoByDomainId(this)" class="aui-nav-item aui-nav-item-active"><span>活动</span></a><a href="javascript:;" class="aui-nav-item"><span>资讯</span></a></div>
+            <section class="activity-list">
+                <a href="/activity/h5Detail?id=2522">
+                    <div class="bigpictext-item">
+                        <dl>
+                            <dt>
+
+                                <span class="lazy" data-src="https://image.urwork.cn/2416f584-0177-44cc-8af9-0b0638ceb930.jpg" style="background-image: url(&quot;https://image.urwork.cn/2416f584-0177-44cc-8af9-0b0638ceb930.jpg?imageMogr2/thumbnail/!1122.0000445842743x630.0000250339508r/gravity/Center/crop/1122.0000445842743x630.0000250339508&quot;);"></span>
+
+
+
+                            </dt>
+                            <dd>
+                                <div class="bigpictext-title">
+                                    <h2 class="bigpictext-title-text">兴业大厦优客工场一周年庆</h2>
+                                </div>
+                                <div class="bigpictext-content">
+                                    <span class="location">
+
+                                        <img src="https://assets.urwork.cn/assets/public/activity/images/location.png" alt="">
+
+
+
+
+                                        太原兴业大厦·优客工场
+
+
+                                    </span>
+                                    <time><img src="https://assets.urwork.cn/assets/public/activity/images/time.png" alt="">
+
+                                        活动进行中
+
+                                    </time>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                </a>
+
+                <a href="/activity/h5Detail?id=2563">
+                    <div class="bigpictext-item">
+                        <dl>
+                            <dt>
+
+                                <span class="lazy" data-src="https://image.urwork.cn/05f7b51a-a47c-4ba7-beaf-42aabdb6bf1e.png" style="background-image: url(&quot;https://image.urwork.cn/05f7b51a-a47c-4ba7-beaf-42aabdb6bf1e.png?imageMogr2/thumbnail/!1122.0000445842743x630.0000250339508r/gravity/Center/crop/1122.0000445842743x630.0000250339508&quot;);"></span>
+
+
+
+                            </dt>
+                            <dd>
+                                <div class="bigpictext-title">
+                                    <h2 class="bigpictext-title-text">定制自由主义TAILORFORNIA特卖会</h2>
+                                </div>
+                                <div class="bigpictext-content">
+                                    <span class="location">
+
+                                        <img src="https://assets.urwork.cn/assets/public/activity/images/location.png" alt="">
+
+
+
+
+                                        上海富邦晶品·优客工场
+
+
+                                    </span>
+                                    <time><img src="https://assets.urwork.cn/assets/public/activity/images/time.png" alt="">
+
+                                        05/22 开始
+
+                                    </time>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                </a>
+
+                <a href="/activity/h5Detail?id=2519">
+                    <div class="bigpictext-item">
+                        <dl>
+                            <dt>
+
+                                <span class="lazy" data-src="https://image.urwork.cn/7f08a6f0-b439-439c-9b4a-835d151c5f84.jpg" style="background-image: url(&quot;https://image.urwork.cn/7f08a6f0-b439-439c-9b4a-835d151c5f84.jpg?imageMogr2/thumbnail/!1122.0000445842743x630.0000250339508r/gravity/Center/crop/1122.0000445842743x630.0000250339508&quot;);"></span>
+
+
+
+                            </dt>
+                            <dd>
+                                <div class="bigpictext-title">
+                                    <h2 class="bigpictext-title-text">手作棒冰 · 你好“夏天”</h2>
+                                </div>
+                                <div class="bigpictext-content">
+                                    <span class="location">
+
+                                        <img src="https://assets.urwork.cn/assets/public/activity/images/location.png" alt="">
+
+
+
+
+                                        西安雁塔路·优客工场
+
+
+                                    </span>
+                                    <time><img src="https://assets.urwork.cn/assets/public/activity/images/time.png" alt="">
+
+                                        05/22 开始
+
+                                    </time>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                </a>
+
+                <a href="/activity/h5Detail?id=2564">
+                    <div class="bigpictext-item">
+                        <dl>
+                            <dt>
+
+                                <span class="lazy" data-src="https://image.urwork.cn/5c0979ea-37ba-4136-a0f3-08b7581aadc5.png" style="background-image: url(&quot;https://image.urwork.cn/5c0979ea-37ba-4136-a0f3-08b7581aadc5.png?imageMogr2/thumbnail/!1122.0000445842743x630.0000250339508r/gravity/Center/crop/1122.0000445842743x630.0000250339508&quot;);"></span>
+
+
+
+                            </dt>
+                            <dd>
+                                <div class="bigpictext-title">
+                                    <h2 class="bigpictext-title-text">蜜芽精选品分交流会</h2>
+                                </div>
+                                <div class="bigpictext-content">
+                                    <span class="location">
+
+                                        <img src="https://assets.urwork.cn/assets/public/activity/images/location.png" alt="">
+
+
+
+
+                                        重庆西西荟·优客工场
+
+
+                                    </span>
+                                    <time><img src="https://assets.urwork.cn/assets/public/activity/images/time.png" alt="">
+
+                                        05/22 开始
+
+                                    </time>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                </a>
+
+                <a href="/activity/h5Detail?id=2562">
+                    <div class="bigpictext-item">
+                        <dl>
+                            <dt>
+
+                                <span class="lazy" data-src="https://image.urwork.cn/8ab6b116-a8fb-4d86-beee-7b63557a750b.jpg"></span>
+
+
+
+                            </dt>
+                            <dd>
+                                <div class="bigpictext-title">
+                                    <h2 class="bigpictext-title-text">STUDIO A 品牌特卖会</h2>
+                                </div>
+                                <div class="bigpictext-content">
+                                    <span class="location">
+
+                                        <img src="https://assets.urwork.cn/assets/public/activity/images/location.png" alt="">
+
+
+
+
+                                        上海富邦晶品·优客工场
+
+
+                                    </span>
+                                    <time><img src="https://assets.urwork.cn/assets/public/activity/images/time.png" alt="">
+
+                                        05/23 开始
+
+                                    </time>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                </a>
+
+                <a href="/activity/h5Detail?id=2537">
+                    <div class="bigpictext-item">
+                        <dl>
+                            <dt>
+
+                                <span class="lazy" data-src="https://image.urwork.cn/4edbee4d-95ef-4ef9-80b1-76cf6a218bf9.jpg"></span>
+
+
+
+                            </dt>
+                            <dd>
+                                <div class="bigpictext-title">
+                                    <h2 class="bigpictext-title-text">优客工场携手”慧算账“财税公益行</h2>
+                                </div>
+                                <div class="bigpictext-content">
+                                    <span class="location">
+
+                                        <img src="https://assets.urwork.cn/assets/public/activity/images/location.png" alt="">
+
+
+
+
+                                        上海金陵大厦·优客工场
+
+
+                                    </span>
+                                    <time><img src="https://assets.urwork.cn/assets/public/activity/images/time.png" alt="">
+
+                                        05/23 开始
+
+                                    </time>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                </a>
+
+                <a href="/activity/h5Detail?id=2560">
+                    <div class="bigpictext-item">
+                        <dl>
+                            <dt>
+
+                                <span class="lazy" data-src="https://image.urwork.cn/a08dd779-90d9-4b6e-b1a3-f08a63105f00.jpg"></span>
+
+
+
+                            </dt>
+                            <dd>
+                                <div class="bigpictext-title">
+                                    <h2 class="bigpictext-title-text">5月生日会</h2>
+                                </div>
+                                <div class="bigpictext-content">
+                                    <span class="location">
+
+                                        <img src="https://assets.urwork.cn/assets/public/activity/images/location.png" alt="">
+
+
+
+
+                                        无锡惠山·优客工场
+
+
+                                    </span>
+                                    <time><img src="https://assets.urwork.cn/assets/public/activity/images/time.png" alt="">
+
+                                        05/24 开始
+
+                                    </time>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                </a>
+
+                <a href="/activity/h5Detail?id=2526">
+                    <div class="bigpictext-item">
+                        <dl>
+                            <dt>
+
+                                <span class="lazy" data-src="https://image.urwork.cn/3dde22cd-e611-461e-baa6-7a40a4ff9df8.jpg"></span>
+
+
+
+                            </dt>
+                            <dd>
+                                <div class="bigpictext-title">
+                                    <h2 class="bigpictext-title-text">优客工场&amp;秦北书社读书会 第二期</h2>
+                                </div>
+                                <div class="bigpictext-content">
+                                    <span class="location">
+
+                                        <img src="https://assets.urwork.cn/assets/public/activity/images/location.png" alt="">
+
+
+
+
+                                        西安万科城·优客工场
+
+
+                                    </span>
+                                    <time><img src="https://assets.urwork.cn/assets/public/activity/images/time.png" alt="">
+
+                                        05/25 开始
+
+                                    </time>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                </a>
+
+                <a href="/activity/h5Detail?id=2347">
+                    <div class="bigpictext-item">
+                        <dl>
+                            <dt>
+
+                                <span class="lazy" data-src="https://image.urwork.cn/820951cf-bb4a-4e88-9207-f13f5700e0ee.jpg"></span>
+
+
+
+                            </dt>
+                            <dd>
+                                <div class="bigpictext-title">
+                                    <h2 class="bigpictext-title-text">“邂逅大咖”创业者分享会 第二期</h2>
+                                </div>
+                                <div class="bigpictext-content">
+                                    <span class="location">
+
+                                        <img src="https://assets.urwork.cn/assets/public/activity/images/location.png" alt="">
+
+
+
+
+                                        西安万科城·优客工场
+
+
+                                    </span>
+                                    <time><img src="https://assets.urwork.cn/assets/public/activity/images/time.png" alt="">
+
+                                        活动进行中
+
+                                    </time>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                </a>
+
+                <a href="/activity/h5Detail?id=2231">
+                    <div class="bigpictext-item">
+                        <dl>
+                            <dt>
+
+                                <span class="lazy" data-src="https://image.urwork.cn/13bb240e-125a-452f-8359-3fc9425c3c3b.jpg"></span>
+
+
+
+                            </dt>
+                            <dd>
+                                <div class="bigpictext-title">
+                                    <h2 class="bigpictext-title-text">你的书籍有力量 | 以爱之名分享</h2>
+                                </div>
+                                <div class="bigpictext-content">
+                                    <span class="location">
+
+                                        <img src="https://assets.urwork.cn/assets/public/activity/images/location.png" alt="">
+
+
+
+
+                                        上海金陵大厦·优客工场
+
+
+                                    </span>
+                                    <time><img src="https://assets.urwork.cn/assets/public/activity/images/time.png" alt="">
+
+                                        活动进行中
+
+                                    </time>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                </a>
+            </section>
+        </section>
+        <footer class="aui-footer aui-footer-fixed">
+            <a href="zckj_index.jsp" class="aui-tabBar-item">
+                <span class="aui-tabBar-item-icon">
+                    <i class="icon icon-gc"></i>
+                </span>
+                <span class="aui-tabBar-item-text">广场</span>
+            </a>
+            <a href="zckj_sq.jsp" class="aui-tabBar-item aui-tabBar-item-active">
+                <span class="aui-tabBar-item-icon">
+                    <i class="icon icon-squ2"></i>
+                </span>
+                <span class="aui-tabBar-item-text">社区</span>
+            </a>
+            <a href="zckj_qun.jsp" class="aui-tabBar-item">
+                <span class="aui-tabBar-item-icon">
+                    <i class="icon icon-sq"></i>
+                </span>
+                <span class="aui-tabBar-item-text">社群</span>
+            </a>
+            <a href="zckj_yuyue.jsp" class="aui-tabBar-item">
+                <span class="aui-tabBar-item-icon">
+                    <i class="icon icon-yy"></i>
+                </span>
+                <span class="aui-tabBar-item-text">预约</span>
+            </a>
+        </footer>
+    </section>
+    <div class="msgbox ">
+        <div class="msgbox-text"><span>请填写公司名称</span></div>
+    </div>
+    <script src="../js/jquery-2.1.4.min.js"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>

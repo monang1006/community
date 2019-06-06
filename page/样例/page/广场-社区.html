@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>广场-社区</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-title" content="智创空间">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script>
+        "use strict";
+        ! function(e, t) {
+            function i() {
+                var e = window.orientation;
+                return 0 == e || 180 == e ? 0 : 90 == e || e == -90 ? 1 : void 0
+            }
+
+            function n() {
+                var e = o.getBoundingClientRect().width;
+                e > 540 && (e = 540), e < 375 && (e = 375);
+                var t = e / 10;
+                o.style.fontSize = t + "px", c.rem = t
+            }
+            var r, a = e.document,
+                o = a.documentElement,
+                m = a.querySelector('meta[name="viewport"]'),
+                s = e.devicePixelRatio,
+                c = t.flexible || (t.flexible = {}),
+                d = i();
+            o.setAttribute("data-dpr", s), m || (m = a.createElement("meta"), m.setAttribute("name", "viewport"), m.setAttribute("content", "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"), a.querySelector("head") && o.firstElementChild.appendChild(m)), e.addEventListener("resize", function() {
+                clearTimeout(r), r = setTimeout(n, 300)
+            }, !1), e.addEventListener("pageshow", function(e) {
+                e.persisted && (clearTimeout(r), r = setTimeout(n, 300))
+            }, !1), e.addEventListener("orientationchange", function(e) {
+                var t = i();
+                d != t && (c.orientation = d = t)
+            }, !1), n(), c.dpr = s, c.refreshRem = n, c.orientation = d, c.rem2px = function(e) {
+                var t = parseFloat(e) * this.rem;
+                return "string" == typeof e && e.match(/rem$/) && (t += "px"), t
+            }, c.px2rem = function(e) {
+                var t = parseFloat(e) / this.rem;
+                return "string" == typeof e && e.match(/px$/) && (t += "rem"), t
+            }
+        }(window, window.UR || (window.UR = {}));
+    </script>
+</head>
+
+<body>
+    <div class="aui-flexView ">
+        <main class="aui-scrollView">
+            <section class="layout-item swiper-layout" style="padding-top: 10px">
+                <a href="javascript:;" id="searchLink" class="search-link"><i class="uricon-search-r"></i>搜索公司</a>
+
+                <div class="swiper-fixed-ratio">
+                    <div class="swiper-container city-swiper swiper-container-horizontal" id="citySwiper" style="display: block;overflow-x: auto">
+                        <div class="swiper-wrapper" style="width: 470px;">
+
+                            <div class="swiper-slide " style="width: 115px;">
+                                <div class="piclist-item city-swiper-item">
+                                    <a href="javascript:;" data-id="110000">
+                                        <div class="piclist-image-box">
+                                            <div class="piclist-image">
+                                                <img class="swiper-lazy swiper-lazy-loaded" src="https://assets.urwork.cn/assets/public/workshop/images/city_rect/beijing.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="center-text" data-city="110000">
+                                            <p class="text-title">北京</p>
+                                            <p class="text-desc"><span>74个社区</span></p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide " style="width: 115px;">
+                                <div class="piclist-item city-swiper-item">
+                                    <a href="javascript:;" data-id="110000">
+                                        <div class="piclist-image-box">
+                                            <div class="piclist-image">
+                                                <img class="swiper-lazy swiper-lazy-loaded" src="https://assets.urwork.cn/assets/public/workshop/images/city_rect/beijing.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="center-text" data-city="110000">
+                                            <p class="text-title">北京</p>
+                                            <p class="text-desc"><span>74个社区</span></p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide " style="width: 115px;">
+                                <div class="piclist-item city-swiper-item">
+                                    <a href="javascript:;" data-id="110000">
+                                        <div class="piclist-image-box">
+                                            <div class="piclist-image">
+                                                <img class="swiper-lazy swiper-lazy-loaded" src="https://assets.urwork.cn/assets/public/workshop/images/city_rect/beijing.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="center-text" data-city="110000">
+                                            <p class="text-title">北京</p>
+                                            <p class="text-desc"><span>74个社区</span></p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide " style="width: 115px;">
+                                <div class="piclist-item city-swiper-item">
+                                    <a href="javascript:;" data-id="110000">
+                                        <div class="piclist-image-box">
+                                            <div class="piclist-image">
+                                                <img class="swiper-lazy swiper-lazy-loaded" src="https://assets.urwork.cn/assets/public/workshop/images/city_rect/beijing.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="center-text" data-city="110000">
+                                            <p class="text-title">北京</p>
+                                            <p class="text-desc"><span>74个社区</span></p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="layout-item workshop-list-layout" id="cityNavLayout">
+                <!-- 城市导航 -->
+                <div class="workshop-city-nav " id="cityNav">
+                    <div class="city-nav" id="cityNavScroll">
+                        <div class="city-nav-inner">
+                            <ul>
+                                <li class="all"><a href="javascript:;" class="active">全部</a></li>
+                                <li><a href="javascript:;">成员单位</a></li>
+                                <li><a href="javascript:;">金融机构</a></li>
+                                <li><a href="javascript:;">监管部门</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <ul class="workshop-list" id="workshopList">
+                    <li>
+                        <a href="/workstage/detail?id=10301">
+                            <div class="workshop-item">
+                                <div class="img-wrap">
+                                    <img class="image lazy" data-src="https://image.urwork.cn/c6f0a720-8155-4152-b0d9-431b16d50e73.jpg" alt="" src="https://image.urwork.cn/c6f0a720-8155-4152-b0d9-431b16d50e73.jpg?imageMogr2/thumbnail/!670.000009983778x376.0000056028366r/gravity/Center/crop/670.000009983778x376.0000056028366">
+                                </div>
+                                <div class="text-wrap">
+                                    <div class="text-title">
+                                        <h6>北京黄村清城·优客工场</h6>
+                                        <div class="score-mod star-min">
+                                            <div class="star"><span style="width: 100%"></span></div>
+                                        </div>
+                                    </div>
+                                    <div class="text-attr">
+                                        <p class="stage-addr-limit"><span>北京市大兴区兴业大街（三段）26号星牌·共享际3-5层</span></p>
+                                        <p></p>
+
+                                        <p>80 工位可订</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+
+
+                    <li>
+                        <a href="/workstage/detail?id=10067">
+                            <div class="workshop-item">
+                                <div class="img-wrap">
+                                    <img class="image lazy" data-src="https://image.urwork.cn/752b91c6-b4e2-416a-a453-c3c05734e6ae.jpg" alt="" src="https://image.urwork.cn/752b91c6-b4e2-416a-a453-c3c05734e6ae.jpg?imageMogr2/thumbnail/!670.000009983778x376.0000056028366r/gravity/Center/crop/670.000009983778x376.0000056028366">
+                                </div>
+                                <div class="text-wrap">
+                                    <div class="text-title">
+                                        <h6>北京方圆大厦·优客工场</h6>
+                                        <div class="score-mod star-min">
+                                            <div class="star"><span style="width: 96.6%"></span></div>
+                                        </div>
+                                    </div>
+                                    <div class="text-attr">
+                                        <p class="stage-addr-limit"><span>北京市海淀区中关村南大街甲56号方圆大厦1-3层</span></p>
+                                        <p></p>
+
+                                        <p>104 工位可订</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+
+
+                    <li>
+                        <a href="/workstage/detail?id=10246">
+                            <div class="workshop-item">
+                                <div class="img-wrap">
+                                    <img class="image lazy" data-src="https://image.urwork.cn/57a6da91-6bf1-4366-8036-c693cff34a74.jpg" alt="" src="https://image.urwork.cn/57a6da91-6bf1-4366-8036-c693cff34a74.jpg?imageMogr2/thumbnail/!670.000009983778x376.0000056028366r/gravity/Center/crop/670.000009983778x376.0000056028366">
+                                </div>
+                                <div class="text-wrap">
+                                    <div class="text-title">
+                                        <h6>北京首创和寓·优客工场</h6>
+                                        <div class="score-mod star-min">
+                                            <div class="star"><span style="width: 100%"></span></div>
+                                        </div>
+                                    </div>
+                                    <div class="text-attr">
+                                        <p class="stage-addr-limit"><span>北京市房山区良乡知兴西路1号院4号楼3层</span></p>
+                                        <p></p>
+
+                                        <p>165 工位可订</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+
+
+                    <li>
+                        <a href="/workstage/detail?id=10218">
+                            <div class="workshop-item">
+                                <div class="img-wrap">
+                                    <img class="image lazy" data-src="https://image.urwork.cn/3f2cb191-b385-4f80-9493-1a33d51c5170.jpg" alt="" src="https://image.urwork.cn/3f2cb191-b385-4f80-9493-1a33d51c5170.jpg?imageMogr2/thumbnail/!670.000009983778x376.0000056028366r/gravity/Center/crop/670.000009983778x376.0000056028366">
+                                </div>
+                                <div class="text-wrap">
+                                    <div class="text-title">
+                                        <h6>北京郭公庄·优客工场</h6>
+                                        <div class="score-mod star-min">
+                                            <div class="star"><span style="width: 100%"></span></div>
+                                        </div>
+                                    </div>
+                                    <div class="text-attr">
+                                        <p class="stage-addr-limit"><span>北京市丰台区丰科路郭公庄中街20号院4号楼</span></p>
+                                        <p></p>
+
+                                        <p>215 工位可订</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+
+            </section>
+        </main>
+        <footer class="aui-footer aui-footer-fixed">
+            <a href="zckj_index.jsp" class="aui-tabBar-item">
+                <span class="aui-tabBar-item-icon">
+                    <i class="icon icon-gc"></i>
+                </span>
+                <span class="aui-tabBar-item-text">广场</span>
+            </a>
+            <a href="zckj_sq.jsp" class="aui-tabBar-item aui-tabBar-item-active">
+                <span class="aui-tabBar-item-icon">
+                    <i class="icon icon-squ2"></i>
+                </span>
+                <span class="aui-tabBar-item-text">社区</span>
+            </a>
+            <a href="zckj_qun.jsp" class="aui-tabBar-item">
+                <span class="aui-tabBar-item-icon">
+                    <i class="icon icon-sq"></i>
+                </span>
+                <span class="aui-tabBar-item-text">社群</span>
+            </a>
+            <a href="zckj_yuyue.jsp" class="aui-tabBar-item">
+                <span class="aui-tabBar-item-icon">
+                    <i class="icon icon-yy"></i>
+                </span>
+                <span class="aui-tabBar-item-text">预约</span>
+            </a>
+        </footer>
+        <div class="wrapper modal-search">
+            <div class="bg"></div>
+            <main id="main" class="modal-main">
+                <div class="searchbar" id="searchbar">
+                    <div class="search-inner">
+                        <form action="/search">
+                            <div class="search-input">
+                                <i class="uricon-search search-icon"></i>
+                                <input type="search" placeholder="搜索公司" autofocus="autofocus">
+
+                            </div>
+                        </form>
+                        <div class="search-action">
+                            <a href="javascript:;" class="search-btn cancel-btn-back">取消</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hot-wrap" id="hotWrap">
+
+                    <section class="layout-item hot-workshop">
+                        <header class="layout-title">
+                            <h2>热门公司</h2>
+                        </header>
+                        <div class="hot-workshop-list">
+                            <ol>
+                                <li>
+                                    <div class="workshop-search-item">
+                                        <a href="/workstage/detail?id=10123">
+                                            <dl>
+                                                <dt>
+                                                    <img src="https://assets.urwork.cn/assets/public/workshop/images/wangfu.png" alt="">
+                                                    <div class="hot-tag">1</div>
+                                                </dt>
+                                                <dd>
+                                                    <h5>王府世纪·优客工场</h5>
+                                                    <p>东城区 王府井大街</p>
+                                                </dd>
+                                            </dl>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li><b>2</b><a href="/workstage/detail?id=10063">鸿坤广场·优客工场</a></li>
+                                <li><b>3</b><a href="/workstage/detail?id=10043">阳光100·优客工场</a></li>
+                                <li><b>4</b><a href="/workstage/detail?id=10035">北京阿里云＋优客工场</a></li>
+                                <li><b>5</b><a href="/workstage/detail?id=10064">东四共享际·优客工场</a></li>
+                            </ol>
+                        </div>
+                    </section>
+                </div>
+
+            </main>
+            <!-- /main -->
+        </div>
+    </div>
+    <script src="../js/jquery-2.1.4.min.js"></script>
+    <script>
+        $(".cancel-btn-back").click(function() {
+            $(".modal-search").hide();
+        })
+        $("#searchLink").click(function() {
+            $(".modal-search").show();
+        })
+    </script>
+</body>
+
+</html>

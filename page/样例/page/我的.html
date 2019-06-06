@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>我的</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-title" content="智创空间">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script>
+        "use strict";
+        ! function(e, t) {
+            function i() {
+                var e = window.orientation;
+                return 0 == e || 180 == e ? 0 : 90 == e || e == -90 ? 1 : void 0
+            }
+
+            function n() {
+                var e = o.getBoundingClientRect().width;
+                e > 540 && (e = 540), e < 375 && (e = 375);
+                var t = e / 10;
+                o.style.fontSize = t + "px", c.rem = t
+            }
+            var r, a = e.document,
+                o = a.documentElement,
+                m = a.querySelector('meta[name="viewport"]'),
+                s = e.devicePixelRatio,
+                c = t.flexible || (t.flexible = {}),
+                d = i();
+            o.setAttribute("data-dpr", s), m || (m = a.createElement("meta"), m.setAttribute("name", "viewport"), m
+                .setAttribute("content",
+                    "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"), a
+                .querySelector("head") && o.firstElementChild.appendChild(m)), e.addEventListener("resize",
+                function() {
+                    clearTimeout(r), r = setTimeout(n, 300)
+                }, !1), e.addEventListener("pageshow", function(e) {
+                e.persisted && (clearTimeout(r), r = setTimeout(n, 300))
+            }, !1), e.addEventListener("orientationchange", function(e) {
+                var t = i();
+                d != t && (c.orientation = d = t)
+            }, !1), n(), c.dpr = s, c.refreshRem = n, c.orientation = d, c.rem2px = function(e) {
+                var t = parseFloat(e) * this.rem;
+                return "string" == typeof e && e.match(/rem$/) && (t += "px"), t
+            }, c.px2rem = function(e) {
+                var t = parseFloat(e) / this.rem;
+                return "string" == typeof e && e.match(/px$/) && (t += "rem"), t
+            }
+        }(window, window.UR || (window.UR = {}));
+    </script>
+
+</head>
+
+<body>
+    <div class="aui-flexView " style="background-color: #f0f0f0;">
+        <main class="aui-scrollView">
+            <section data-render="template" data-url-pre="/user/ucenter" data-url="/user/userData" class="rendered">
+                <div class="user-center-profile">
+                    <div class="user-center-profile-inner">
+                        <dl>
+                            <dt>
+                                <img src="../images/icon1.png" alt="">
+                            </dt>
+                            <dd>
+                                U445539
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+
+
+
+
+                <div class="menu-list">
+                    <a class="menu-item-primary" href="/rentMeetingRoom/list?plantId=">
+                        <div class="menu-title">
+                            <img src="../images/icon1.png" alt=""><span>我的预约</span>
+                        </div>
+                        <i class="menu-arrow uricon-arrow-right"></i>
+                    </a>
+                    <div class="menu-list-status">
+                        <div>
+                            <img src="../images/icona.png" alt="">
+                            <div>已通过</div>
+                        </div>
+                        <div>
+                            <img src="../images/iconc.png" alt="">
+                            <div>审核中</div>
+                        </div>
+                        <div>
+                            <img src="../images/iconb.png" alt="">
+                            <div>未通过</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-list">
+
+                    <a class="menu-item-primary" href="/rentMeetingRoom/orderList">
+                        <div class="menu-title">
+                            <img src="../images/icon2.png" alt=""><span>我的活动</span>
+                        </div>
+
+                        <i class="menu-arrow uricon-arrow-right"></i>
+                    </a>
+                    <a class="menu-item-primary" href="/company/myCompanyList">
+                        <div class="menu-title">
+                            <img src="../images/icon3.png" alt=""><span>我的资讯</span>
+                        </div>
+                        <i class="menu-arrow uricon-arrow-right"></i>
+                    </a>
+
+
+
+
+
+
+                    <a class="menu-item-primary" href="/alipayAuth/zhimaAuth">
+                        <div class="menu-title new-msg">
+                            <img src="../images/icon4.png" alt=""><span>空间预约</span>
+                        </div>
+                        <i class="menu-arrow uricon-arrow-right"></i>
+                    </a>
+
+
+                </div>
+
+                <div class="btn-wrapper">
+                    <a href="javascript:;" class="btn signout-btn js-logout">退出登录</a>
+                </div>
+            </section>
+        </main>
+        <footer class="aui-footer aui-footer-fixed">
+            <a href="zckj_index.jsp" class="aui-tabBar-item">
+                <span class="aui-tabBar-item-icon">
+                    <i class="icon icon-gc"></i>
+                </span>
+                <span class="aui-tabBar-item-text">广场</span>
+            </a>
+            <a href="zckj_sq.jsp" class="aui-tabBar-item ">
+                <span class="aui-tabBar-item-icon">
+                    <i class="icon icon-squ"></i>
+                </span>
+                <span class="aui-tabBar-item-text">社区</span>
+            </a>
+            <a href="zckj_qun.jsp" class="aui-tabBar-item">
+                <span class="aui-tabBar-item-icon">
+                    <i class="icon icon-sq"></i>
+                </span>
+                <span class="aui-tabBar-item-text">社群</span>
+            </a>
+            <a href="zckj_yuyue.jsp" class="aui-tabBar-item aui-tabBar-item-active">
+                <span class="aui-tabBar-item-icon">
+                    <i class="icon icon-yy2"></i>
+                </span>
+                <span class="aui-tabBar-item-text">预约</span>
+            </a>
+        </footer>
+    </div>
+
+</body>
+
+</html>

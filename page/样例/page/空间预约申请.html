@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>空间预约申请</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-title" content="智创空间">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script>
+        "use strict";
+        ! function(e, t) {
+            function i() {
+                var e = window.orientation;
+                return 0 == e || 180 == e ? 0 : 90 == e || e == -90 ? 1 : void 0
+            }
+
+            function n() {
+                var e = o.getBoundingClientRect().width;
+                e > 540 && (e = 540), e < 375 && (e = 375);
+                var t = e / 10;
+                o.style.fontSize = t + "px", c.rem = t
+            }
+            var r, a = e.document,
+                o = a.documentElement,
+                m = a.querySelector('meta[name="viewport"]'),
+                s = e.devicePixelRatio,
+                c = t.flexible || (t.flexible = {}),
+                d = i();
+            o.setAttribute("data-dpr", s), m || (m = a.createElement("meta"), m.setAttribute("name", "viewport"), m.setAttribute("content", "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"), a.querySelector("head") && o.firstElementChild.appendChild(m)), e.addEventListener("resize", function() {
+                clearTimeout(r), r = setTimeout(n, 300)
+            }, !1), e.addEventListener("pageshow", function(e) {
+                e.persisted && (clearTimeout(r), r = setTimeout(n, 300))
+            }, !1), e.addEventListener("orientationchange", function(e) {
+                var t = i();
+                d != t && (c.orientation = d = t)
+            }, !1), n(), c.dpr = s, c.refreshRem = n, c.orientation = d, c.rem2px = function(e) {
+                var t = parseFloat(e) * this.rem;
+                return "string" == typeof e && e.match(/rem$/) && (t += "px"), t
+            }, c.px2rem = function(e) {
+                var t = parseFloat(e) / this.rem;
+                return "string" == typeof e && e.match(/px$/) && (t += "rem"), t
+            }
+        }(window, window.UR || (window.UR = {}));
+    </script>
+</head>
+
+<body>
+    <form class="form form-primary form-def">
+        <div class="form-scroll">
+            <div class="form-item">
+                <label class="form-label">预约人</label>
+                <div class="form-cont">
+                    <i class="uricon-arrow-right ricon"></i>
+                    <input type="text" name="" id="">
+                </div>
+            </div>
+
+            <div class="form-item form-item-telphone">
+                <label class="form-label">联系电话</label>
+                <div class="form-cont">
+                    <i class="uricon-arrow-right ricon hidden"></i>
+                    <input type="tel" name="" id="">
+                </div>
+            </div>
+
+            <div class="form-item form-bottom">
+                <label class="form-label">公司名称</label>
+                <div class="form-cont">
+                    <i class="uricon-arrow-right ricon"></i>
+                    <input type="text" name="" id="">
+                </div>
+            </div>
+
+            <div class="form-item">
+                <label class="form-label">预约日期</label>
+                <div class="form-cont">
+                    <i class="uricon-arrow-right ricon"></i>
+                    <input type="date" name="" id="">
+                </div>
+            </div>
+
+
+
+            <div class="form-item">
+                <label class="form-label">入驻人数</label>
+                <div class="form-cont">
+                    <i class="uricon-arrow-right ricon"></i>
+                    <input type="number" name="" id="">
+                </div>
+            </div>
+
+            <div class="form-item form-remark" style="display: block">
+                <label class="form-label" style="display: block">备注（选填）</label>
+                <div class="form-cont">
+                    <div class="textarea-wrap sm-height">
+                        <textarea name="remark" maxlength="200" placeholder="请填写备注说明..." class="resize-none"></textarea>
+                    </div>
+                    <div class="form-counter">
+                        <span>0</span>/200
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="form-position">
+            <div class="form-action">
+                <button type="button" class="btn btn-primary" id="submit">提交申请</button>
+            </div>
+        </div>
+    </form>
+    <div class="msgbox ">
+        <div class="msgbox-text"><span>请填写公司名称</span></div>
+    </div>
+    <script src="../js/jquery-2.1.4.min.js"></script>
+    <script>
+        $("#submit").click(function() {
+            $(".msgbox").show();
+            setTimeout(function() {
+                $(".msgbox").hide();
+            }, 1000)
+        })
+    </script>
+</body>
+
+</html>

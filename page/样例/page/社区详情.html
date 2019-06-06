@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>社区详情</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-title" content="智创空间">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script>
+        "use strict";
+        ! function(e, t) {
+            function i() {
+                var e = window.orientation;
+                return 0 == e || 180 == e ? 0 : 90 == e || e == -90 ? 1 : void 0
+            }
+
+            function n() {
+                var e = o.getBoundingClientRect().width;
+                e > 540 && (e = 540), e < 375 && (e = 375);
+                var t = e / 10;
+                o.style.fontSize = t + "px", c.rem = t
+            }
+            var r, a = e.document,
+                o = a.documentElement,
+                m = a.querySelector('meta[name="viewport"]'),
+                s = e.devicePixelRatio,
+                c = t.flexible || (t.flexible = {}),
+                d = i();
+            o.setAttribute("data-dpr", s), m || (m = a.createElement("meta"), m.setAttribute("name", "viewport"), m
+                .setAttribute("content",
+                    "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"), a
+                .querySelector("head") && o.firstElementChild.appendChild(m)), e.addEventListener("resize",
+                function() {
+                    clearTimeout(r), r = setTimeout(n, 300)
+                }, !1), e.addEventListener("pageshow", function(e) {
+                e.persisted && (clearTimeout(r), r = setTimeout(n, 300))
+            }, !1), e.addEventListener("orientationchange", function(e) {
+                var t = i();
+                d != t && (c.orientation = d = t)
+            }, !1), n(), c.dpr = s, c.refreshRem = n, c.orientation = d, c.rem2px = function(e) {
+                var t = parseFloat(e) * this.rem;
+                return "string" == typeof e && e.match(/rem$/) && (t += "px"), t
+            }, c.px2rem = function(e) {
+                var t = parseFloat(e) / this.rem;
+                return "string" == typeof e && e.match(/px$/) && (t += "rem"), t
+            }
+        }(window, window.UR || (window.UR = {}));
+    </script>
+
+</head>
+
+<body>
+    <div class="aui-flexView  ">
+        <main class="aui-scrollView">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="https://image.urwork.cn/da619890-e55d-43cf-aae2-86ee5184e992.jpg?imageMogr2/thumbnail/!822x460r/gravity/Center/crop/822x460/format/jpeg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://image.urwork.cn/aba32d70-f928-4c78-b8ff-cfd1971f9eb6.jpg?imageMogr2/thumbnail/!822x460r/gravity/Center/crop/822x460/format/jpeg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://image.urwork.cn/937ad207-961c-47e3-8b4a-47cb88b469cc.jpg?imageMogr2/thumbnail/!822x460r/gravity/Center/crop/822x460/format/jpeg" alt="">
+                    </div>
+                </div>
+                <!-- 如果需要分页器 -->
+                <div class="swiper-pagination"></div>
+            </div>
+            <section class="layout-item workshop-profile">
+                <header>
+                    <h1 style="padding-right: 0;">北京黄村清城·优客工场</h1>
+                </header>
+                <div class="workshop-location">
+                    <img class="js-navigation" src="https://restapi.amap.com/v3/staticmap?location=116.32489,39.73848&amp;zoom=14&amp;size=335*100&amp;scale=2&amp;markers=large,,A:116.32489,39.73848&amp;labels=优客工场,3,0,26,0xFFFFFF,0xe95513:116.32489,39.73848&amp;key=739267cee1c64393de3dc02798fce752" alt="北京黄村清城·优客工场">
+                    <ul>
+                        <li>
+                            <p>北京市大兴区兴业大街（三段）26号星牌·共享际3-5层</p><em class="btn-icon js-navigation"><i class="uricon-daohang"></i></em>
+                        </li>
+                        <li>
+                            <p><a href="tel:4001188891">4001188891</a></p><em class="btn-icon"><a href="tel:4001188891"><i class="uricon-phone"></i></a></em>
+                        </li>
+                    </ul>
+                </div>
+                <div class="workshop-resume is-show-more" id="workshopResume" show-mode="less" show-line="2.5">
+                    <div class="content-wrap">
+                        <div class="less-content" style="display: none;">
+                            北京黄村清城·优客工场位于北京市大兴区兴业大街26号星牌·共享际3-5层，社区面积1389.27㎡，设计工位253个。项目周边配套成熟，集商...</div>
+                        <article class="more-content editor-style" style="display: block;">
+                            <p style="font-size:14px">
+                                北京黄村清城·优客工场位于北京市大兴区兴业大街26号星牌·共享际3-5层，社区面积1389.27㎡，设计工位253个。项目周边配套成熟，集商业、办公、长租公寓于一体，打造微型的城市综合体。优客工场以创业者的身份，怀揣着服务全球创造力阶层的使命，用匠人精神为企业提供全生命周期的服务。<br>
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="aui-footer aui-footer-fixed">
+            <a href="zckj_index.jsp" class="aui-tabBar-item">
+                <span class="aui-tabBar-item-icon">
+                    <i class="icon icon-gc"></i>
+                </span>
+                <span class="aui-tabBar-item-text">广场</span>
+            </a>
+            <a href="zckj_sq.jsp" class="aui-tabBar-item aui-tabBar-item-active">
+                <span class="aui-tabBar-item-icon">
+                    <i class="icon icon-squ2"></i>
+                </span>
+                <span class="aui-tabBar-item-text">社区</span>
+            </a>
+            <a href="zckj_qun.jsp" class="aui-tabBar-item">
+                <span class="aui-tabBar-item-icon">
+                    <i class="icon icon-sq"></i>
+                </span>
+                <span class="aui-tabBar-item-text">社群</span>
+            </a>
+            <a href="zckj_yuyue.jsp" class="aui-tabBar-item">
+                <span class="aui-tabBar-item-icon">
+                    <i class="icon icon-yy"></i>
+                </span>
+                <span class="aui-tabBar-item-text">预约</span>
+            </a>
+        </footer>
+    </div>
+    <section class="ur-dialog active" style="display:none;">
+        <div class="ur-mask active"></div>
+        <div class="ur-container">
+            <div class="ur-content">打开优客工场APP？ </div>
+            <div class="ur-tools"><a href="javascript:;" class="ur-no">放弃</a><a href="javascript:;" class="ur-yes">打开</a> </div>
+        </div>
+    </section>
+    <script src="../js/jquery-2.1.4.min.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <script>
+        $(".js-navigation").click(function() {
+            $(".ur-dialog").show();
+        })
+        $(".ur-no").click(function() {
+            $(".ur-dialog").hide();
+        })
+        var mySwiper = new Swiper('.swiper-container', {
+            loop: true, // 循环模式选项
+
+            // 如果需要分页器
+            pagination: {
+                el: '.swiper-pagination',
+            }
+
+        })
+    </script>
+</body>
+
+</html>

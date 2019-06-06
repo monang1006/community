@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>我的资讯</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-title" content="智创空间">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script>
+        "use strict";
+        ! function(e, t) {
+            function i() {
+                var e = window.orientation;
+                return 0 == e || 180 == e ? 0 : 90 == e || e == -90 ? 1 : void 0
+            }
+
+            function n() {
+                var e = o.getBoundingClientRect().width;
+                e > 540 && (e = 540), e < 375 && (e = 375);
+                var t = e / 10;
+                o.style.fontSize = t + "px", c.rem = t
+            }
+            var r, a = e.document,
+                o = a.documentElement,
+                m = a.querySelector('meta[name="viewport"]'),
+                s = e.devicePixelRatio,
+                c = t.flexible || (t.flexible = {}),
+                d = i();
+            o.setAttribute("data-dpr", s), m || (m = a.createElement("meta"), m.setAttribute("name", "viewport"), m
+                .setAttribute("content",
+                    "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"), a
+                .querySelector("head") && o.firstElementChild.appendChild(m)), e.addEventListener("resize",
+                function() {
+                    clearTimeout(r), r = setTimeout(n, 300)
+                }, !1), e.addEventListener("pageshow", function(e) {
+                e.persisted && (clearTimeout(r), r = setTimeout(n, 300))
+            }, !1), e.addEventListener("orientationchange", function(e) {
+                var t = i();
+                d != t && (c.orientation = d = t)
+            }, !1), n(), c.dpr = s, c.refreshRem = n, c.orientation = d, c.rem2px = function(e) {
+                var t = parseFloat(e) * this.rem;
+                return "string" == typeof e && e.match(/rem$/) && (t += "px"), t
+            }, c.px2rem = function(e) {
+                var t = parseFloat(e) / this.rem;
+                return "string" == typeof e && e.match(/px$/) && (t += "rem"), t
+            }
+        }(window, window.UR || (window.UR = {}));
+    </script>
+</head>
+
+<body>
+    <section class="aui-flexView">
+        <section class="aui-scrollView">
+            <div class="consult-list-item-wrapper">
+                <section class="list-wrapper list-page">
+                    <!---->
+                    <div class="list-inner" style="">
+                        <ul>
+                            <li class="list-item">
+                                <div><a href="/news/getnewsdetial?id=1498" class="consult-list-item consult--list-object">
+                                        <div class="consult-text">
+                                            <h2>WORK Buy Carnival 首届“双创节”开幕...</h2>
+                                            <div>
+                                                2019/01/20 15:30:20
+                                            </div>
+                                        </div>
+                                        <div class="consult-img-wrapper">
+                                            <div class="img-wrap img-error"><img></div>
+                                        </div>
+                                    </a></div>
+                            </li>
+                            <li class="list-item">
+                                <div><a href="/news/getnewsdetial?id=1497" class="consult-list-item consult--list-object">
+                                        <div class="consult-text">
+                                            <h2>优News | 2018联合办公实力榜发布，优客工场品...</h2>
+                                            <div>
+                                                2019/01/20 15:30:20
+                                            </div>
+                                        </div>
+                                        <div class="consult-img-wrapper">
+                                            <div class="img-wrap img-error"><img></div>
+                                        </div>
+                                    </a></div>
+                            </li>
+                            <li class="list-item">
+                                <div><a href="/news/getnewsdetial?id=1496" class="consult-list-item consult--list-object">
+                                        <div class="consult-text">
+                                            <h2>Ucommune boosts youth innov...</h2>
+                                            <div>
+                                                2019/01/20 15:30:20
+                                            </div>
+                                        </div>
+                                        <div class="consult-img-wrapper">
+                                            <div class="img-wrap"><img></div>
+                                        </div>
+                                    </a></div>
+                            </li>
+                            <li class="list-item">
+                                <div><a href="/news/getnewsdetial?id=1494" class="consult-list-item consult--list-object">
+                                        <div class="consult-text">
+                                            <h2>U News | Ucommune Acquires ...</h2>
+                                            <div>
+                                                2019/01/20 15:30:20
+                                            </div>
+                                        </div>
+                                        <div class="consult-img-wrapper">
+                                            <div class="img-wrap"><img></div>
+                                        </div>
+                                    </a></div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <footer class="aui-footer aui-footer-fixed">
+            <a href="zckj_index.jsp" class="aui-tabBar-item">
+                <span class="aui-tabBar-item-icon">
+                    <i class="icon icon-gc"></i>
+                </span>
+                <span class="aui-tabBar-item-text">广场</span>
+            </a>
+            <a href="zckj_sq.jsp" class="aui-tabBar-item ">
+                <span class="aui-tabBar-item-icon">
+                    <i class="icon icon-squ2"></i>
+                </span>
+                <span class="aui-tabBar-item-text">社区</span>
+            </a>
+            <a href="zckj_qun.jsp" class="aui-tabBar-item">
+                <span class="aui-tabBar-item-icon">
+                    <i class="icon icon-sq"></i>
+                </span>
+                <span class="aui-tabBar-item-text">社群</span>
+            </a>
+            <a href="zckj_yuyue.jsp" class="aui-tabBar-item">
+                <span class="aui-tabBar-item-icon">
+                    <i class="icon icon-yy"></i>
+                </span>
+                <span class="aui-tabBar-item-text">预约</span>
+            </a>
+        </footer>
+    </section>
+    <div class="msgbox ">
+        <div class="msgbox-text"><span>请填写公司名称</span></div>
+    </div>
+    <script src="../js/jquery-2.1.4.min.js"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>

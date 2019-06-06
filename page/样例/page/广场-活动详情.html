@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>广场-活动详情</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-title" content="智创空间">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script>
+        "use strict";
+        ! function(e, t) {
+            function i() {
+                var e = window.orientation;
+                return 0 == e || 180 == e ? 0 : 90 == e || e == -90 ? 1 : void 0
+            }
+
+            function n() {
+                var e = o.getBoundingClientRect().width;
+                e > 540 && (e = 540), e < 375 && (e = 375);
+                var t = e / 10;
+                o.style.fontSize = t + "px", c.rem = t
+            }
+            var r, a = e.document,
+                o = a.documentElement,
+                m = a.querySelector('meta[name="viewport"]'),
+                s = e.devicePixelRatio,
+                c = t.flexible || (t.flexible = {}),
+                d = i();
+            o.setAttribute("data-dpr", s), m || (m = a.createElement("meta"), m.setAttribute("name", "viewport"), m.setAttribute("content", "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"), a.querySelector("head") && o.firstElementChild.appendChild(m)), e.addEventListener("resize", function() {
+                clearTimeout(r), r = setTimeout(n, 300)
+            }, !1), e.addEventListener("pageshow", function(e) {
+                e.persisted && (clearTimeout(r), r = setTimeout(n, 300))
+            }, !1), e.addEventListener("orientationchange", function(e) {
+                var t = i();
+                d != t && (c.orientation = d = t)
+            }, !1), n(), c.dpr = s, c.refreshRem = n, c.orientation = d, c.rem2px = function(e) {
+                var t = parseFloat(e) * this.rem;
+                return "string" == typeof e && e.match(/rem$/) && (t += "px"), t
+            }, c.px2rem = function(e) {
+                var t = parseFloat(e) / this.rem;
+                return "string" == typeof e && e.match(/px$/) && (t += "rem"), t
+            }
+        }(window, window.UR || (window.UR = {}));
+    </script>
+</head>
+
+<body>
+    <div class="wrapper ">
+        <div class="wrapper-inner">
+            <main id="main">
+                <div id="content">
+                    <section class="activity-header">
+                        <div class="img-wrap">
+                            <span style="background-image: url('https://image.urwork.cn/05f7b51a-a47c-4ba7-beaf-42aabdb6bf1e.png?imageMogr2/thumbnail/!414x233r/gravity/Center/crop/414x233')"></span>
+                        </div>
+                        <!-- activity-info -->
+                        <div class="activity-info">
+                            <div class="activity-info-inner">
+                                <h1>定制自由主义TAILORFORNIA特卖会</h1>
+                                <div class="info-item-box">
+                                    <ul>
+                                        <li> <i class="uricon-time"></i>
+                                            <p>
+                                                05/22 10:00 - 05/22 15:00
+                                            </p>
+                                        </li>
+                                        <li> <i class="uricon-locationB"></i>
+                                            <p class="lh-24">
+                                                上海富邦晶品·优客工场
+                                            </p>
+                                        </li>
+                                        <li> <i class="uricon-people"></i>
+                                            <p>
+                                                剩余名额 100
+                                            </p>
+                                        </li>
+                                        <li> <i class="uricon-fabu"></i>
+                                            <p>上海富邦晶品·优客工场 发布</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /activity-info -->
+                    </section>
+                    <section class="activity-details">
+                        <div class="second-title">
+                            <h2>详情</h2>
+                        </div>
+                        <div class="detail-box">
+                            <article class="editor-style">
+                                <p><span style="font-size: 1px;">TAILORFORNIA (定制自由主义)全定制服装品牌</span></p>
+                                <p><span style="font-size: 1px;">一源于对自由的追求和对文化与科技的喜爱。</span></p>
+                                <p><span style="font-size: 1px;"><br></span></p>
+                                <p><span style="font-size: 1px;">处于全球服饰产业及消费风潮变革的时代，TAILORFORNIA倡导的“全定制”概念及购买模式旨在使我们的顾客通过由.上好面料精心定制而成的衬衣、西服加持，成就干金难买的独家气质。</span></p>
+                                <p><span style="font-size: 1px;">不同于传统裁缝店的门店定制模式, TAILORFORNIA采用.上门量体的ONLINE TOOFFLINE定制模式。用户通过微信或者电话预约着装顾问上门量体完成首次定制;用户的体型数据被记录到TAILORFORNIA的资料库后，便可以通过微信公众号的线上定制系统进行独立定制。</span></p>
+                                <p><span style="font-size: 1px;"><br></span></p>
+                                <p><span style="font-size: 1px;">5月22日 优客工场晶品社区，诚邀您的参加~</span></p>
+                            </article>
+                        </div>
+                    </section>
+                </div>
+                <div class="form-position">
+                    <div class="form-action">
+                        <button type="button" class="btn btn-primary" id="submit">申请报名</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>
